@@ -7,6 +7,136 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <table border="1" >
+            <caption> Table </caption>
+        <colgroup>
+                <col/>
+            <col style="background-color: cornflowerblue;"
+                 span="2"/>
+            <col/>
+        </colgroup>
+    <thead>
+            <th colspan="3"> Nick </th>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="3"> Nick </td>
+            <td rowspan="3"> Mark </td>
+            <td> Hello </td>
+        </tr>
+        <tr>
+            <td> 321 </td>
+        </tr>
+        <tr>
+            <td> 987 </td>
+        </tr>
+    </tbody>
+    <tfoot>
+            <td colspan="3"> itog </td>
+    </tfoot>   
+    </table>
+    <form>
+        <p>
+            <Fieldset>
+        <div>
+            <label for="name"> Nickname </label>
+        </div>
+        <input
+            id="name"
+            type="text"
+            placeholder="Введите ФИО"/>
+        <button type="submit"> 
+            <strong> submit </strong> 
+        </button>
+        <button type="reset">
+                Сбросить значение
+        </button>
+        <div>
+            <label for="date"> email</label>
+        </div>
+        <input 
+            required
+            id="date"
+            type="email"
+            placeholder="Введите email"
+            multiple>
+        <div>
+            <label for="1"> Пароль </label>
+            <input
+            required
+            id="1" 
+            type="password"
+            placeholder="Введите пароль"/>
+        </div>
+        <div>
+            <label for="2"> Возраст </label>
+            <input
+                id="2" 
+                type="number"
+                placeholder="Кол-во полных лет"
+                step="3"
+                min="3"
+                max="70"/>   
+        </div>
+        <div>
+            <label> Возраст </label>
+            <input 
+                type="range"
+                step="1"
+                min="1"
+                max="100"/>
+        </div> 
+        <div>
+            <label> Дата и время </label>
+            <input 
+                required
+                type="datetime-local"/>
+        </div>
+        <div>
+            <input 
+                type="file"
+                placeholder="Выберите до 3-х фото"
+                accept="image/*"
+                multiple/>
+        </div>
+        <div>
+            <label> Выбрать цвет </label>
+            <input type="color"/>
+        </div>
+        <textarea 
+            cols="50" 
+            rows="3">
+        </textarea>
+        <div>
+        <input type="checkbox" checked/>877
+        <input type="checkbox"/>32
+        <input type="checkbox"/>12
+        </div>
+        <div>
+            <input type="radio" name="option"/>123
+            <input type="radio" name="option"/>777
+        </div>
+        <div>
+            <select multiple>
+                <optgroup label="Мужики">
+                <option value="1"> 1 </option>
+                <option value="2" selected> 2</option>
+                <option value="3" disabled> 3 </option>
+            </optgroup>
+                <option value="4"> 4 </option>
+                <option value="5"> 5 </option>
+                <option value="6"> 6 </option>
+                <option value="7"> 7 </option>
+            </select>
+        </div>
+        <div>
+            
+
+        
+        </div>
+        </p>
+
+    </Fieldset>   
+    </form>
 </body>
 </html>
