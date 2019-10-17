@@ -8,47 +8,93 @@
 </head>
 <body>
     <h1> Lesson 9 (Homework) - Form</h1>
-    <form autocomplete="off" style="width:800px">
-        <fieldset>
-            <legend> Credentials </legend>
-            <p>
-            <label for="1">First Name: </label>
-                <input type="text" 
-                       id="1"
-                       placeholder="Enter your first name"
-                       required/>
-            </p>
-            <p>
-                <label for="2"> Last Name: </label>
-                    <input type="text"
-                           id="2"
-                           placeholder="Enter your last name"
-                           required/>
-            </p>
-            <p>
-                <label for="3"> Email: </label>
-                    <input type="text"
-                           id="3"
-                           placeholder="example@mail.com">
-            </p>   
-            <p>
-                <label for="4"> Password: </label> 
-                    <input type="password" 
-                           id="4"
-                           placeholder="At least 6 symbol"
-                           maxlength="6"
-                           required/>
-            </p> 
-            <p>
-                <label for="5"> Previous experirnce: </label>
-                    <textarea  
-                            id="5" 
-                            cols="50" 
-                            rows="5">
-                    </textarea>
-            </p>       
-        </fieldset>
+        <form autocomplete="off" style="width:800px">
+            <fieldset>
+                <legend> Credentials </legend>
+                    <p>
+                        <label for="First Name"> First Name: </label>
+                            <input type="text" 
+                            id="First Name"
+                            placeholder="Enter your first name"
+                            required/>
+                    </p>
+                    <p>
+                        <label for="Last Name"> Last Name: </label>
+                                <input type="text"
+                                id="Last Name"
+                                placeholder="Enter your last name"
+                                required/>
+                    </p>
+                    <p>
+                        <label for="Email"> Email: </label>
+                                <input type="text"
+                                id="Email"
+                                placeholder="example@mail.com"/>
+                    </p>   
+                    <p>
+                        <label for="Password"> Password: </label> 
+                            <input type="password" 
+                                id="Password"
+                                placeholder="At least 6 symbol"
+                                maxlength="6"
+                                required/>
+                    </p> 
+                    <p>
+                        <label for="Previous experirnce"> 
+                            Previous experirnce: 
+                        </label>
+                            <textarea  
+                                    id="Previous experirnce" 
+                                    cols="50" 
+                                    rows="5">
+                            </textarea>
+                    </p>       
+            </fieldset>
+                <br/>
+            <fieldset>
+                <legend> Imortant data: </legend>
+                    <p>
+                        <label for="Date of birth"> Date of birth: </label>
+                            <input type="date" 
+                                   id="Date of birth"
+                                   required/>
+                    </p>
+                    <p>
+                        <label for="Desire salary"> Desire salary: </label>
+                            <input type="number"
+                                   id="Desire salary"
+                                   min="100"
+                                   max="2000"
+                                   step="100"
+                                   required/>
+                    </p>
+                    <p>
+                        <label> Position: </label>
+                            <input type="radio" checked/> Frontend developer
+                            <input type="radio"/> Backend developer
+                            <input type="radio"/> UI Designer 
+                    </p>
+                    <p>
+                        <label> Benefits: </label>
+                            <input type="checkbox"> Snacks&Coffe
+                            <input type="checkbox"> Insurance
+                            <input type="checkbox"> 30-days vacations
+                            <input type="checkbox"> Open-minded manager
+                            <input type="checkbox"> Free English courses
+                    </p>
+                    <p>
+                        <label> Current level: </label>
+                            <select size="1">
+                                <option value="1" selected> Noobie </option>
+                                <option value="2"> Junior </option>
+                                <option value="3"> Middle </option>
+                                <option value="4"> Senior </option>
+                            </select> 
+                    </p>
+            </fieldset>
+                <br/>
+            <fieldset>
         
-    </form>
+        </form>
 </body>
 </html>
