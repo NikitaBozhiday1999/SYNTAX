@@ -9,60 +9,53 @@
 <body>
     <header>
         <img src="../images/site-logo.png" 
-             alt="Site logo" 
+             alt="Картика логотип" 
              width="100"/>
         <h1> Careers </h1>
     </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="../index.html"> Home </a>
+            <li>
+                <a href="work.html"> Work </a>
+            <li>
+                <a href="company.html"> Company </a>
+            <li>
+                <a href="careers.html"> Careers </a>
+            </li>
+        </ul>
+    </nav>
     <main>
-        <nav>
-            <ul>
-                <li>
-                    <a href="/index.html"> Home </a>
-                <li>
-                    <a href="D:\SYNTAX_cw_hw\lesson-10-hw\pages\work.html"> Work </a>
-                <li>
-                    <a href="D:\SYNTAX_cw_hw\lesson-10-hw\pages\company.html"> Company </a>
-                <li>
-                    <a href="D:\SYNTAX_cw_hw\lesson-10-hw\pages\careers.html"> Careers </a>
-                </li>
-            </ul>
-        </nav>
-        <article>
-            <section>
-                <h2> What career you would like to start? </h2>
-                <form>
-                    <p>
-                        <label for="name"> Your name: </label>
-                        <input type="text"
-                               id="name"
-                               placeholder="Name" 
-                               required
-                               minlength="2"
-                               maxlength="30"
-                               autocomplete="off"/>
-                    </p>
-                    <p>
-                        <label for="email"> Your email: </label>
-                        <input type="text"
-                               id="email"
-                               placeholder="Email"
-                               required
-                               autocomplete="off"/>
-                    </p>
-                    <p>
-                        <label> Choose your career: </label>
-                        <input type="checkbox"/> Frontend
-                        <input type="checkbox"/> Backend
-                        <input type="checkbox"/> HTML coder
-                        <input type="checkbox"/> Desinger
-                    </p>
-                    <p>
-                        <input type="submit" 
-                               value="Send">
-                    </p>
-                </form>
-            </section>
-        </article>
+        <h2> What career you would like to start? </h2>
+        <form autocomplete="off">
+            <p>
+                <label for="name"> Your name: </label>
+                <input type="text"
+                        id="name"
+                        placeholder="Name" 
+                        required
+                        minlength="2"
+                        maxlength="30"/>
+            </p>
+            <p>
+                <label for="email"> Your email: </label>
+                <input type="email"
+                        id="email"
+                        placeholder="Email"
+                        required/>
+            </p>
+            <p>
+                <label> Choose your career: </label>
+                <input type="checkbox"/> Frontend
+                <input type="checkbox"/> Backend
+                <input type="checkbox"/> HTML coder
+                <input type="checkbox"/> Desinger
+            </p>
+            <p>
+                <button type="submit"> Send </button>
+            </p>
+        </form>
     </main>
 </body>
 </html>
