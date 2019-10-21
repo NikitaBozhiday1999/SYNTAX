@@ -1,0 +1,44 @@
+section, p, li {
+    color: blueviolet;
+}
+ul {
+    list-style-type: none;
+}
+.bg-orange {
+    background-color: red;
+    font-size: 50px;
+}
+#blog { 
+    font-size: 30px;
+    background-color: pink;
+}
+header ul li {
+    text-transform: uppercase;
+}
+.content-wrapper > mark {
+    background-color: blue;
+    color: white;
+}
+h2~section {
+    font-weight: bold;
+}
+h2+section {
+    background-color: green;
+    color: white;
+}
+[href="https://example.com"] {
+    font-size: 50px;
+}
+[title~="beautiful"] {
+    background-color: gray;
+}
+[class*="app"] {
+    color: green
+}
+a[href^="http://"] {
+    color: red;
+    font-weight: bold;
+}
+a[href$=".ru"] {
+    font-size: 60px;
+}
