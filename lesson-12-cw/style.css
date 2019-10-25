@@ -1,0 +1,62 @@
+:root {
+    --dark-orange: rgb(150, 99, 6)
+}
+header {
+    color: var(--dark-orange);
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+}
+header ul {
+    border: inherit;
+}
+header ul {
+    border: 2px rgb(150, 99, 6) solid;
+    border-radius: 10px;
+}
+.fixed-size {
+    border: solid 2px black;
+    width: 300px;
+    height: 200px;
+}
+.bigger-text {
+    font-size: 10px;
+}
+.bigger-text>span {
+    font-size: 5em;
+}
+mark {
+    font-size: 2rem;    
+}
+.advert-block {
+    width: 300px;
+    height: 300px;
+    background-color: rgba(177, 103, 103, 0.623);
+    font-size: 1.5rem;
+}
+.vieport-sizes {
+    width: 80vw;
+    height: 50vh;
+    border: solid 1px red;
+}
+.vieport-sizes h3 {
+    font-size: 10vmax;
+}
+article {
+    opacity: 0.8;
+    color: rgba(192, 22, 22, 0.932);
+}
+footer {
+    border: solid 3px red;
+    width: calc(100% - 100px);
+}
+@media print {
+    .vieport-sizes h3 {
+        font-size: 20px;
+    }
+}
+
+
+
+
+
