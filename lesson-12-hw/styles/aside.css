@@ -1,7 +1,7 @@
 #aside {
-    color: rgba(00,00,00,0.6);
     width: 120px;
     border: solid 1px;
+    color: rgba(0,0,0,0.6);
 }
 #aside ul {
     list-style-type: circle;
