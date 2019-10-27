@@ -1,0 +1,52 @@
+@import url("aside.css");
+:root {
+    --pantone: rgba(255,00,00,0.5)
+}
+html body {
+    width: 100%;
+}
+header {
+    width: 600px;
+    padding: 16px;
+    border: 2px dashed rgba(115, 60, 241, 0.6);
+}
+header nav {
+    width: 50%;
+    border: inherit;
+}
+header h1 {
+    font-size: 28px;
+    color: rgb(00,00,00)
+}
+.navigation-list {
+    list-style-type: none;
+    font-size: 18px;
+    color: hsl(220, 80%, 40%);
+    text-decoration: underline;
+}
+main {
+    font-size: 18px;
+}
+main .items-list {
+    font-size: 0.75em;
+}
+main h3 {
+    font-size: 1.5em;
+}
+main section p {
+    font-size: 0.9rem;
+}
+.semi-visible {
+    opacity: 50%;
+}
+.semi-visible + section {
+    background-color: var(--pantone);
+}
+#invisible {
+    color: transparent;
+}
+.footer {
+    width: 100% - 400px;
+    height: 10vmax;
+    border: dotted 2px var(--pantone)
+}
