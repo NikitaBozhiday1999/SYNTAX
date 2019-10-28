@@ -1,6 +1,6 @@
 * {
-    border: none; 
-    color: rgb(0, 0, 0);
+    border: none !important;
+    color: rgb(0, 0, 0) !important;
 }
 .navigation-list li {
     font-size: 18px;
