@@ -1,0 +1,87 @@
+header ul li a:visited {
+    color: green;
+}
+header ul li a:hover {
+    font-weight: bold;
+}
+header ul li a:active {
+    color: red;                                                                                         
+}
+header ul li a:focus {
+    background-color: yellow;
+}
+
+.additional-menu li:first-child {
+    font-size: 1.2rem;
+    color: green;
+}
+.additional-menu li:last-child {
+    font-size: 1.2rem;
+    color: blue;
+}
+.main-list {
+    list-style-type: none;
+    font-size: 18px;;
+}
+.main-list :nth-child(3n+5) {
+    opacity: 0;
+}
+.main-list :nth-child(6) {
+    font-size: 10px;
+}
+.main-list :nth-last-child(-n+3) {
+    color: blue;
+}
+article h2:first-of-type:last-of-type  {
+    color: yellow;
+}
+article section h3:only-of-type {
+    color: green;
+}
+article section:last-of-type {
+    border: 14px green solid;
+}
+article section:first-of-type {
+    border: 14px red solid;
+}
+.types-seletion 
+:nth-last-of-type(n+3):nth-last-of-type(-n+4) {
+    font-size: 50px;
+}
+.links-block a:hover {
+    background-color: green;
+}
+.footer p:empty {
+    background-color: brown;
+    width: 20px;
+    height: 20px;
+}
+input:valid {
+    border: green 10px solid;
+}
+input:invalid {
+    border: red 10px solid;
+}
+.copyright:before {
+    content: 'All';
+    color: red;
+}
+.copyright:after {
+    content: 'End';
+    color: royalblue;
+    width: 200px;
+    display: block;
+    border: 1px solid;
+}
+.footer p::first-letter {
+    font-size: 2rem;
+    color: red;
+}
+.footer p::before{
+    content: 'Hello';
+}
+#paragraph:first-line {
+    background-color: #d11ac2;
+    color: white;
+    border: 3px solid #d11ac2;
+}
