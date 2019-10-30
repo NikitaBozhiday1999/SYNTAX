@@ -1,9 +1,10 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
-header h1:first-letter {
-    font-size: 2em;
-    font-weight: bold;
+header p:first-letter {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 37px;
 }
 table {
     width: 60vw;

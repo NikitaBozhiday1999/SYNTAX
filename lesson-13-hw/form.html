@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Tenor+Sans&display=swap" 
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poller+One&display=swap" 
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" 
+          rel="stylesheet">  
+    <link rel="stylesheet" href="./CSS/form.css">   
+    <title> Homework 13 </title>
+</head>
+<body> 
+    <header>
+        <div> Form </div>
+    </header>
+    <main>
+        <form>
+            <p>
+                <label for="first-name"> First name: </label>
+                <input id="first-name" 
+                       type="text"
+                       maxlength="50"
+                       required/>
+            </p>
+            <p>
+                <label for="last-name"> Last name: </label>
+                <input id="last-name" 
+                       type="text"
+                       maxlength="50"
+                       required/> 
+            </p>  
+            <p>
+                <label for="age"> Age: </label>
+                <input id="age" 
+                       type="number"
+                       min="1"
+                       max="99"
+                       step="1"
+                       required/> 
+            </p>
+            <p>
+                <label for="e-mail"> E-mail: </label>
+                <input id="e-mail" 
+                       type="email"
+                       maxlength="50"> 
+            </p>     
+            <p>
+                <button class="reset"
+                        type="reset" > 
+                        Reset 
+                </button>
+                <button class="submit" 
+                        type="submit"> 
+                        Submit 
+                </button>
+            </p>
+        </form>
+    </main>
+</body>
+</html>
