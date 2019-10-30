@@ -1,0 +1,103 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+header h1:first-letter {
+    font-size: 2em;
+    font-weight: bold;
+}
+table {
+    width: 60vw;
+    max-width: 1200px;
+    min-width: 500px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 40px;
+}
+header h1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 37px;
+}
+thead th a {
+    text-decoration: none;
+}
+tr td a {
+    text-decoration: none;
+}
+tr td {
+    border-bottom: 1px solid #FFFFFF;
+}
+tr td:first-child {
+    border-right: 1px rgba(116, 116, 116, 0.2) solid;
+}
+tr td:nth-child(2) {
+    border-right: 1px rgba(116, 116, 116, 0.2) solid;
+}
+thead:nth-child(1)  {
+    background: #A3E9A4;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+}
+thead th:first-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
+}
+thead th:nth-child(2) {
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
+}
+tbody tr:nth-child(-n+2) {
+    background: rgba(255, 192, 192, 0.5);
+}
+tbody tr:nth-child(-n+5):nth-child(n+4) {
+    background: rgba(191, 191, 191, 0.2);
+}
+tbody tr:nth-child(-n+8):nth-child(n+7) {
+    background: rgba(255, 238, 149, 0.6);
+}
+tbody tr:nth-child(9) {
+    background: rgba(210, 250, 255, 0.6);
+}
+thead th:hover {
+    background: #6D95FA;
+    text-decoration-line: underline;
+}
+thead th a:hover {
+    color: white;
+}
+tr td:first-child a:visited {
+    color: #AD00FF;
+}
+tr td:first-child a:hover {
+    color: #000000;
+    font-weight: bold;
+    text-decoration-line: underline;
+}
+tr td:first-child a:active {
+    color: #001AFF;
+    font-weight: bold;
+}
+tr td:nth-child(2) a:visited {
+    color: #8700C7;
+}
+tr td:nth-child(2) a:hover {
+    color: #17AAD9;
+    font-weight: bold;
+    text-decoration-line: underline;
+}
+tr td:nth-child(2) a:active {
+    color: #0015D0;
+    font-weight: bold;
+    text-decoration-line: underline;
+}
+tr td:nth-child(3) a:visited {
+    color: #FF736A;
+    font-weight: bold;
+}
+tr td:nth-child(3) a:hover {
+    color: #000000;
+    background: #C5EAFF;
+}
+tr td:nth-child(3) a:active {
+    color: #000000;
+    font-weight: bold;
+    background: #D1A4FF;
+}
