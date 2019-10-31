@@ -13,6 +13,7 @@ div:before {
 }
 div:after {
     content: 'Validation';
+    font-family: Source Sans Pro;
     color: #FF0000;
     font-style: italic;
     font-weight: 600;
@@ -22,12 +23,12 @@ div:after {
 #age {
     width: 157px;
 }
-form input:hover {
+form input:focus:invalid {
     background: #FFFFFF;
     border: 1px solid rgba(255, 0, 0, 0.4);
     box-shadow: 1px 3px 6px rgba(255, 0, 0, 0.2);
 }
-form input:hover:valid {
+form input:focus:valid {
     background: #FFFFFF;
     border: 1px solid rgba(12, 149, 0, 0.6);
     box-shadow: 1px 1px 10px rgba(12, 149, 0, 0.2);
@@ -42,53 +43,34 @@ input {
     color: #FF6644;
     background: #FFFFFF;
     border: 1px solid #FF6644;
-    width: 80px;
-    height: 24px;
-    font-size: 12px;
-    line-height: 14px;
 }
 .reset:hover {
-    width: 80px;
-    height: 24px;
     background: #FF6644;
     box-shadow: 2px 2px 8px rgba(255, 102, 68, 0.25);
-    font-size: 12px;
-    line-height: 14px;
-    color: white;
 }
 .reset:active {
-    width: 80px;
-    height: 24px;
     background: #DA2700;
     box-shadow: 3px 3px 10px rgba(218, 39, 0, 0.45);
-    font-size: 12px;
-    line-height: 14px;
-    color: white;
+
 }
 .submit {
-    color: white;
     background: #5278FF;
     border: #5278FF;
-    width: 80px;
-    height: 24px;
-    font-size: 12px;
-    line-height: 14px;
 }
 .submit:hover {
-    color: white;
     background: #0132DF;
     box-shadow: 2px 2px 8px rgba(1, 50, 223, 0.25);
+}
+.submit:active {
+    background: #001C81;
+    box-shadow: 3px 3px 10px rgba(0, 28, 129, 0.25);
+}
+.reset, .reset:hover, .reset:active, .submit, .submit:hover, .submit:active {
     width: 80px;
     height: 24px;
     font-size: 12px;
     line-height: 14px;
 }
-.submit:active {
+.reset:hover, .reset:active, .submit, .submit:hover, .submit:active {
     color: white;
-    background: #001C81;
-    box-shadow: 3px 3px 10px rgba(0, 28, 129, 0.25);
-    width: 80px;
-    height: 24px;
-    font-size: 12px;
-    line-height: 14px;
 }

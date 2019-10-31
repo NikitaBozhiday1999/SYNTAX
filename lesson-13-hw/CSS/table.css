@@ -15,15 +15,11 @@ table {
     line-height: 40px;
 }
 header h1 {
-    font-style: normal;
     font-weight: 500;
     font-size: 32px;
     line-height: 37px;
 }
-thead th a {
-    text-decoration: none;
-}
-tr td a {
+thead th a, tr td a {
     text-decoration: none;
 }
 tr td {
@@ -35,7 +31,7 @@ tr td:first-child {
 tr td:nth-child(2) {
     border-right: 1px rgba(116, 116, 116, 0.2) solid;
 }
-thead:nth-child(1)  {
+thead:first-child  {
     background: #A3E9A4;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
 }
@@ -61,7 +57,7 @@ thead th:hover {
     background: #6D95FA;
     text-decoration-line: underline;
 }
-thead th a:hover {
+thead th:hover {
     color: white;
 }
 tr td:first-child a:visited {
@@ -75,6 +71,7 @@ tr td:first-child a:hover {
 tr td:first-child a:active {
     color: #001AFF;
     font-weight: bold;
+    text-decoration-line: none;
 }
 tr td:nth-child(2) a:visited {
     color: #8700C7;
