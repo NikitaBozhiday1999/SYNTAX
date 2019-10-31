@@ -1,0 +1,92 @@
+.navigation-bar ul {
+    list-style-type: none;
+}
+.navigation-bar ul li {
+    display: inline-block;
+    font-size: 1.25rem;
+}
+ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    box-shadow: 2px 3px 3px rgb(0, 25, 110, 0.6);
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+ul li a {
+    padding: 16px 32px;
+}
+ul li:not(:last-child) a {
+    border-right: 1px solid rgb(255, 255, 255, 0.6);
+}
+body {
+    margin: 0;
+}
+header {
+    margin-bottom: 24px;
+}
+ul li a:focus {
+    outline: 1px dashed white;
+}
+ul li a {
+    width: 200px;
+    box-sizing: border-box;
+}
+ul li a:hover {
+    background-color: red;
+}
+.card {
+    margin: 20px;
+    width: 400px;
+    padding: 18px 16px;
+    box-shadow: 2px 6px 2px rgb(255, 125, 200, 0.2);
+}
+main {
+    padding: 80px;
+}
+h3 {
+    margin: 0;
+}
+p {
+    margin-bottom: 0;
+}
+.card {
+    position: relative;
+    background-color: #fff;
+}
+img {
+    width: 16px;
+    position: absolute;
+    top: 12px;
+    right: 12px;    
+} 
+
+
+
+
+header {
+    position: fixed;
+    background-color: blue;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+body html {
+    width: 100%;
+    height: 100%;
+}
+html {
+    background-image: url(/images/background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+
