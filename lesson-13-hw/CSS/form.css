@@ -47,6 +47,7 @@ input {
 .reset:hover {
     background: #FF6644;
     box-shadow: 2px 2px 8px rgba(255, 102, 68, 0.25);
+    color: white;
 }
 .reset:active {
     background: #DA2700;
@@ -65,12 +66,12 @@ input {
     background: #001C81;
     box-shadow: 3px 3px 10px rgba(0, 28, 129, 0.25);
 }
-.reset, .reset:hover, .reset:active, .submit, .submit:hover, .submit:active {
+.reset, .submit {
     width: 80px;
     height: 24px;
     font-size: 12px;
     line-height: 14px;
 }
-.reset:hover, .reset:active, .submit, .submit:hover, .submit:active {
+.submit {
     color: white;
 }
