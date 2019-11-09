@@ -12,9 +12,6 @@ body {
     background: #E5E5E5;
 }
 header {
-    height: 776px;
-}
-header {
     display: flex;
     height: 940px;
     justify-content: center;
@@ -24,7 +21,7 @@ header {
     background-size: cover;
     background-position: center center;
 }
-h1 {
+.top-places {
     margin: 0;
     display: flex;
     white-space: nowrap;
@@ -34,7 +31,7 @@ h1 {
     font-size: 96px;
     color: rgba(255, 255, 255, 0.85);
     text-shadow: 0px 0px 48px rgba(255, 255, 255, 0.85);
-    animation: top-animation;
+    animation: top-scale-color-shadow;
     animation-duration: 6s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
@@ -43,11 +40,10 @@ nav {
     position: absolute;
     background:rgba(0, 0, 0, 0.87);
     width: 100%;
-    position: absolutle;
     z-index: 1;
     height: 64px;
 }
-.flex-container {
+.flex-container-menu {
     position: relative;
     margin: 0;
     list-style-type: none;
@@ -55,7 +51,7 @@ nav {
     display: flex;
     justify-content: space-around;
 }
-.list {
+.list{
     position: relative;
     height: 64px;
     width: 100%;
@@ -81,32 +77,34 @@ a {
 }
 .list > .sub-menu {
     width: 100%;
+    height: 142px;
     list-style-type: none;
     display: none;
 }
 .list:hover > .sub-menu {
-    position: absolute ;
     display: block;
-    list-style-type: none;
-    background: #F2F2F2;
+    background-color: #F2F2F2;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #000000;
+    padding-top: 22px;
 }
-.list > .sub-menu .option {
+.list > .sub-menu .dropdown-menu {
     display: flex;
+    align-items: flex-end;
+    position: relative;
+    width: 100%;
+    height: 36px;
     font-size: 18px;
-    align-items: flex-start;
     padding-left: 24px;
-    padding-bottom: 25px;
-    padding-top: 14px;
+    padding-bottom: 12px;
     cursor: pointer;
 }
-.list > .sub-menu .option:hover {
-    width: auto;
-    height: 100%;
+.list > .sub-menu .dropdown-menu:hover {
     background: #D1D1D1;
+    width: 100%;
     transition: all 0.3s linear;
 }
-.list > .sub-menu .option:active {
+.list > .sub-menu .dropdown-menu:active {
     background: #717171;
     color: white;
 }
@@ -117,143 +115,135 @@ a {
     position: absolute;
     display: none;
 }
-    main {
-        margin-top: 80px;
-        height: 100%;
-        display: grid;
-        grid-template-columns: repeat(3, 350px); 
-        grid-template-rows: repeat(3, 285px);
-        grid-template-areas: "numb-1 . numb-6"
-                            "numb-3 numb-3 numb-5"
-                            "numb-4 numb-2 numb-2";
-        justify-content: center;
-        grid-gap: 95px 95px;
-        grid-auto-flow: column;
-    }
-    .numb-1, .numb-2, .numb-3, 
-    .numb-4, .numb-5, .numb-6 {
-        position: relative;
-        background-repeat: no-repeat;
-        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.12), 
-                    0px 2px 2px rgba(0, 0, 0, 0.14);
-        border-radius: 24px 0px 5px 5px;
-        border-bottom-right-radius: 25px 40px;
-    }
-    .numb-1:hover, .numb-2:hover, .numb-3:hover, 
-    .numb-4:hover, .numb-5:hover, .numb-6:hover{
-        transform: scale(1.1, 1.1);
-        transition: ease 0.4s;
-        box-shadow: 0px 3px 14px rgba(0, 0, 0, 0.12), 
-                    0px 8px 10px rgba(0, 0, 0, 0.14), 
-                    0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
-    .numb-1 {
-        grid-area: numb-1;
-    }
-    .numb-2 {
-        grid-area: numb-2;
-        border-radius: 8px;
-        overflow: hidden;
-    }
-    .descr {
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 200px;
-        background-color: rgba(0, 0, 0, 0.6);
-        font-size: 48px;
-        color: white;
-        text-align: center;
-        padding-top: 68px;
-        opacity: 0;
-        bottom: 100%;
-        transition: all 0.3s linear;
-    }
-    .numb-2 img {
-        width: 795px; 
-        height: 200px;
-        border-radius: 8px;
-    }
-    .numb-2:hover .descr {
-        opacity: 1;
-        bottom: 85px;
-    }
-    .numb-3 {
-        grid-area: numb-3;
-        border-radius: 8px;
-        overflow: hidden;
-    }
-    .numb-3 img {
-        width: 795px; 
-        height: 200px;
-        border-radius: 8px;
-    }
-    .numb-3:hover .descr {
-        opacity: 1;
-        bottom: 85px;
-    }
-    .numb-4 {
-        grid-area: numb-4;
-    }
-    .numb-5 {
-        grid-area: numb-5;
-    }
-    .numb-6 {
-        grid-area: numb-6;
-    }
-    #text-1 {
-        margin-top: 16px;
-        margin-left: 16px;
-        margin-bottom: 4px;
-        width: 95%;
-        height: 80px;
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 33px;
-        position: absolute;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-    }
-    #text-2 {
-        margin-top: 45px;
-        margin-left: 17px;
-        width: 95%;
-        height: 80px;
-        color: rgba(0, 0, 0, 0.54);
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis; 
-    }
-    footer { 
-        margin-top: 80px;
-        color: white;
-        padding-left: 24px;
-        padding-right: 24px;
-        height: 64px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        background: #555555;
-        box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.25);
-    }
+main {
+    margin-top: 80px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 350px); 
+    grid-template-rows: repeat(3, 285px);
+    grid-template-areas: "card-1 . card-6"
+                        "card-3 card-3 card-5"
+                        "card-4 card-2 card-2";
+    justify-content: center;
+    grid-gap: 95px;
+}
+.card-1, .card-2, .card-3, 
+.card-4, .card-5, .card-6 {
+    position: relative;
+    background-repeat: no-repeat;
+    background-color: white;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.12), 
+                0px 2px 2px rgba(0, 0, 0, 0.14);
+    border-radius: 24px 0px 5px 5px;
+    border-bottom-right-radius: 25px 40px;
+}
+.card-1:hover, .card-4:hover, .card-5:hover, 
+.card-6:hover {
+    transform: scale(1.1);
+    transition: ease 0.4s;
+    box-shadow: 0px 3px 14px rgba(0, 0, 0, 0.12), 
+                0px 8px 10px rgba(0, 0, 0, 0.14), 
+                0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.card-1 {
+    grid-area: card-1;
+}
+.card-2 {
+    grid-area: card-2;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.descr {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 48px;
+    color: white;
+    text-align: center;
+    padding-top: 68px;
+    opacity: 0;
+    bottom: 100%;
+    transition: all 0.3s linear;
+}
+.card-2 img {
+    width: 795px; 
+    height: 200px;
+}
+.card-2:hover .descr {
+    opacity: 1;
+    bottom: 85px;
+}
+.card-3 {
+    grid-area: card-3;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.card-3 img {
+    width: 795px; 
+    height: 200px;
+}
+.card-3:hover .descr {
+    opacity: 1;
+    bottom: 85px;
+}
+.card-4 {
+    grid-area: card-4;
+}
+.card-5 {
+    grid-area: card-5;
+}
+.card-6 {
+    grid-area: card-6;
+}
+#text-1 {
+    position: absolute;
+    top: 200px;
+    margin: 16px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+   
+}
+#text-2 {
+    margin: 45px 17px;
+    color: rgba(0, 0, 0, 0.54);
+}
+#text-1, #text-2 {
+    width: 95%;
+    height: 80px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+footer { 
+    margin-top: 80px;
+    color: white;
+    padding: 0 24px;
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #555555;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.25);
+}
 @media (min-width: 768px) and (max-width: 1024px) {
     main {
         height: 100%;
-        display: grid;
         grid-template-columns: repeat(2, 350px); 
         grid-template-rows: repeat(4, 285px);
-        grid-template-areas: "numb-1 numb-6"
-                            "numb-3 numb-3"
-                            "numb-2 numb-2"
-                            "numb-5 numb-4";
+        grid-template-areas: "card-1 card-6"
+                            "card-3 card-3"
+                            "card-2 card-2"
+                            "card-5 card-4";
         justify-content: center;
-        grid-gap: 95px 95px;
+        grid-gap: 65px 64px;
         grid-auto-flow: column;
     }
-    h1 {
-        font-size: 80px;
+    .top-places {
+        font-size: 64px;
         text-shadow: 0px 0px 48px rgba(255, 255, 255, 0.85);
     }
 }
@@ -263,23 +253,25 @@ a {
         display: grid;
         grid-template-columns: repeat(1, 350px); 
         grid-template-rows: repeat(6, 285px);
-        grid-template-areas: "numb-1"
-                             "numb-6"
-                             "numb-3" 
-                             "numb-2" 
-                             "numb-5" 
-                             "numb-4";
+        grid-template-areas: "card-1"
+                                "card-6"
+                                "card-3" 
+                                "card-2" 
+                                "card-5" 
+                                "card-4";
         justify-content: center;
-        grid-gap: 35px 35px;
-        grid-auto-flow: column;
+        grid-gap: 32px;
         margin-top: 32px;
     }
-    .numb-2 img, .numb-3 img {
+    .card-2 img, .card-3 img {
         width: 350px; 
         height: 200px;
     }
-    .flex-container {
+    .flex-container-menu {
         display: none;
+    }
+    nav {
+        height: 48px;
     }
     .mini-menu {
         display: block;
@@ -291,22 +283,26 @@ a {
         margin-right: 16px;
     }
     .stick-2 {
-        margin-top: 26px;
+        margin-top: 24px;
         margin-right: 16px;
     }
     .stick-3 {
-        margin-top: 34px;
+        margin-top: 30px;
         margin-right: 16px;
     }
-    h1 {
-        font-size: 75px;
+    .top-places {
+        font-size: 36px;
         text-shadow: 0px 0px 48px rgba(255, 255, 255, 0.85);
     }
     .descr {
         padding-top: 30px;
     }
+    .footer {
+        font-size: 12px;
+        height: 48px;
+    }
 }
-@keyframes top-animation {
+@keyframes top-scale-color-shadow {
     from {
         transform: scale(1, 1); 
         color: rgba(255, 255, 255, 0.85);
@@ -321,6 +317,5 @@ a {
         transform: scale(1, 1);
         color: rgba(255, 255, 255, 0.85);
         text-shadow: 0px 0px 48px rgba(255, 255, 255, 0.85);
-    }
     }
 }
