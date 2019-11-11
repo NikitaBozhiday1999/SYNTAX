@@ -104,13 +104,13 @@ a {
 }
 .list > .sub-menu .dropdown-menu {
     display: flex;
-    align-items: flex-end;
     position: relative;
     width: 100%;
-    height: 36px;
+    height: 33px;
     font-size: 18px;
     padding-left: 24px;
     padding-bottom: 8px;
+    margin-top: 0;
     cursor: pointer;
 }
 .list > .sub-menu .dropdown-menu:hover {
@@ -124,9 +124,10 @@ a {
 }
 .mini-menu {
     width: 30px;
-    height: 0px;
+    height: 2px;
     border: 1px solid white;
     position: absolute;
+    background-color: #fff;
     display: none;
 }
 main {
