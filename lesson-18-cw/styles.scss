@@ -1,0 +1,66 @@
+$bg-color: rgba(0, 0, 0, .87);
+@import "mixing";
+
+:root {
+ --font-color: rgb(255, 255, 255);
+}
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+html {
+    @include background(image, url("https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"));
+    @include background(repeat, no-repeat);
+    @include background(size, cover);
+}
+body {
+    margin: 0;
+}
+@media (max-width: 800px) {
+    height: 28px;
+}
+.header {
+    height: 64px;
+    color: var(--font-color);
+    @include transparent-black-bg(0.87);
+
+    .header__nav, 
+    .header__nav-list {
+        height: 100%;
+    }
+
+    .header__nav-list {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.header__nav-item {
+    @extend %flex-center;
+    flex: 1 1 30%;
+    cursor: pointer;
+
+    &:hover {
+        background-color: darkgray;
+        height: 100%;
+    }
+    &:active {
+        background-color: lightgray;
+        color: black;
+    }
+
+}
+.footer {
+    @extend %flex-center;
+    color: rgb(255, 255, 255);
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    @include transparent-black-bg;
+}

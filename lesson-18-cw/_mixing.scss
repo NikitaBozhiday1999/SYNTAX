@@ -1,0 +1,7 @@
+@mixin transparent-black-bg($opasity: 1) {
+    background-color: rgba(0, 0, 0, $opasity);
+}
+
+@mixin background($property, $value) {
+    background-#{$property}: $value;
+}
