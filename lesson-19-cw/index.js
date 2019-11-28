@@ -22,11 +22,15 @@
 // alert('hello');
 // prompt('enter name', 'Nick')
 
-let name = prompt('Введите имя');
+// let name = prompt('Введите имя');
 
-alert(name);
+// alert(name);
 
-console.log (name);
+// console.log (name);
 
-let gick;
-console.log(gick);
+// let gick;
+// console.log(gick);
+
+let age = prompt('122');
+ alert('enter');
+ console.log(typeof age);
