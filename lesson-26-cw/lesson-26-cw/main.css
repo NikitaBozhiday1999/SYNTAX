@@ -150,6 +150,7 @@ ul {
         transform: translateX(300px);
         will-change: transform;
         z-index: 2;
+        transition: 500ms ease-in-out;
     }
 
     .header__links--active {
