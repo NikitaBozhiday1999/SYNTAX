@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/materialize.min.css" type="text/css" media="screen,projection"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title> Project Gallery-images </title>
+</head>
+<body class="brown lighten-5">
+    <div id="app" class="container center-align">
+        <div class="preloader-wrapper big active" v-if="isLoading">
+            <div class="spinner-layer spinner-blue">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+            </div>
+    
+            <div class="spinner-layer spinner-red">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+            </div>
+    
+            <div class="spinner-layer spinner-yellow">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+            </div>
+    
+            <div class="spinner-layer spinner-green">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+            </div>
+        </div>
+        <h1 class="center-align"> Image gallery </h1>
+        <div class="row card-panel hoverable grey lighten-2">
+            <!-- <div class="col l3">
+                <img src="https://picsum.photos/201/150.jpg" 
+                    alt="Image lorem-picsum"
+                    class="materialboxed" />    
+            </div>
+            <div class="col l3">
+                <img src="https://picsum.photos/200/151.jpg" 
+                    alt="Image lorem-picsum"
+                    class="materialboxed" />    
+            </div>
+            <div class="col l3">
+                <img src="https://picsum.photos/199/150.jpg" 
+                    alt="Image lorem-picsum"
+                    class="materialboxed" />    
+            </div>
+            <div class="col l3">
+                <img src="https://picsum.photos/200/149.jpg" 
+                    alt="Image lorem-picsum"
+                    class="materialboxed" />    
+            </div>
+            <div class="col l3">
+                <img src="https://picsum.photos/200/100.jpg" 
+                    alt="Image lorem-picsum"
+                    class="materialboxed" />    
+            </div>
+            <div class="col l3">
+                <img src="https://picsum.photos/200/250.jpg" 
+                    alt="Image lorem-picsum"
+                    class="materialboxed" />    
+            </div>
+            <div class="col l3">
+                <img src="https://picsum.photos/200/350.jpg" 
+                    alt="Image lorem-picsum"
+                    class="materialboxed" />    
+            </div>
+            <div class="col l3">
+                <img src="https://picsum.photos/200/152.jpg" 
+                    alt="Image lorem-picsum"
+                    class="materialboxed" />    
+            </div>
+            <div class="col l3">
+                <img src="https://picsum.photos/202/150.jpg" 
+                    alt="Image lorem-picsum"
+                    class="materialboxed" />    
+            </div>
+            <div class="col l3">
+                <img src="https://picsum.photos/200/200.jpg" 
+                    alt="Image lorem-picsum"
+                    class="materialboxed" />    
+            </div> -->
+        </div>
+        <ul class="pagination center-align">
+            <li class="disabled">
+                <a href="#!">
+                    <i class="material-icons">chevron_left</i>
+                </a>
+            </li>
+            <li class="active">
+                <a href="#!">1</a>
+            </li>
+            <li class="waves-effect">
+                <a href="#!">2</a>
+            </li>
+            <li class="waves-effect">
+                <a href="#!">3</a>
+            </li>
+            <li class="waves-effect">
+                <a href="#!">4</a>
+            </li>
+            <li class="waves-effect">
+                <a href="#!">5</a>
+            </li>
+            <li class="waves-effect">
+                <a href="#!">
+                    <i class="material-icons">chevron_right</i>
+                </a>
+            </li>
+        </ul>
+    </div>
+     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./index.js"></script>
+<body>
+</html>
