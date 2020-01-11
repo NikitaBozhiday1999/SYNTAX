@@ -44,8 +44,12 @@ let vm = new Vue({
             
             this.newTodo = '';
         }, 
-        deleteTodoEl(index) {
-            this.todoItems.splice(index);
+    //    deleteTodoEl() {
+    //         this.todoItems.splice(todoItems.id, 1);
+    //     }
+        editNewTodo(index) {
+            let newEdit = prompt('Введите новое задание');
+            this.todoItems.splice(index, 1, newEdit);
         }
     },
 });

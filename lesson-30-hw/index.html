@@ -44,28 +44,43 @@
                         
                         <form class="row" @click.prevent="addNewTodo($event)">
                             <div class="col s11">
-                                <input type="text" class="validate" placeholder="Что сделать?" v-model="newTodo" />
+                                <input type="text" 
+                                       class="validate" 
+                                       placeholder="Что сделать?" 
+                                       v-model="newTodo" />
                             </div>
                             
-                            <button class="btn waves-effect waves-light" type="submit"> Добавить </button>
+                            <button class="btn waves-effect waves-light" 
+                                    type="submit"> Добавить </button>
                         </form>
                     </li>
-                    <li class="collection-item" v-for="(item, index) in todoItems" @click='deleteTodoEl(index)' :key="item.id">
-                        <label class="grey-text" :class="{ 
+                    <li class="collection-item" 
+                        v-for="(item, index) in todoItems" 
+                        @click='deleteTodoEl(index)' 
+                        :key="item.id">
+                        <label class="grey-text" 
+                               :class="{ 
                             'text-lighten-2': item.isChecked,
                             'text-darken-4': !item.isChecked
                          }">
-                            <input type="checkbox" v-model="item.isChecked" />
+                            <input type="checkbox" 
+                                   v-model="item.isChecked" />
                             <span :style="{ textDecoration: item.isChecked ? 'line-through' : 'none' }"> 
                                 {{ item.text }} 
                             </span>
-                            <i class="material-icons" :style="{ position: 'absolute', right: '20px' }"> close </i>
+                            <i class="material-icons hoverable" 
+                               @click='todoItems.splice(todoItems.id, 1)' 
+                               :style="{ position: 'absolute', right: '20px' }"> close </i>
+                            <i class="material-icons" 
+                               @click="editNewTodo()"
+                               :style="{ position: 'absolute', right: '50px' }"> edit </i> 
+                               
+                           
                         </label>
                     </li>
                 </ul>
             </div>
         </div>
-
         <!-- Vue.js -->
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
