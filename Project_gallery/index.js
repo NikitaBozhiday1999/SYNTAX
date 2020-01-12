@@ -35,8 +35,6 @@ async function readImage() {
     }
 }
 
-readImage();
-
 function startSession() {
     console.log(localStorage);
     if(localStorage.length == 0) {
@@ -98,9 +96,9 @@ listEl.addEventListener('click', pagination);
 startSession();
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    let elems = document.querySelectorAll('.materialboxed');
-    let instances = M.Materialbox.init(elems, options);
-  });
+// document.addEventListener('DOMContentLoaded', function() {
+//     let elems = document.querySelectorAll('.materialboxed');
+//     let instances = M.Materialbox.init(elems, options);
+//   });
 
-M.AutoInit();
+// M.AutoInit();
