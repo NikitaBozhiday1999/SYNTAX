@@ -17,6 +17,7 @@ function buildGallery(image) {
                       <img class="materialboxed" src="${image[i].download_url}">
                     </div>`;
       bodyEl.insertAdjacentHTML('beforeend', cardImg);
+      M.AutoInit();
   }
 }
 
@@ -96,9 +97,9 @@ listEl.addEventListener('click', pagination);
 startSession();
 
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     let elems = document.querySelectorAll('.materialboxed');
-//     let instances = M.Materialbox.init(elems, options);
-//   });
+document.addEventListener('DOMContentLoaded', function() {
+    let elems = document.querySelectorAll('.materialboxed');
+    let instances = M.Materialbox.init(elems, options);
+  });
 
-// M.AutoInit();
+
