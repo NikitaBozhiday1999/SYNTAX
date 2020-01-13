@@ -50,8 +50,7 @@ let vm = new Vue({
         editNewTodo(itemId) {
             let newEdit = prompt('Введите новое задание');
             console.log(newEdit);
-            return this.todoItems.splice(itemId, 1, newEdit);
-            
+            this.todoItems[itemId].text = newEdit;
         }
     },
 });
