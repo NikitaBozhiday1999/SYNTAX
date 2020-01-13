@@ -55,8 +55,7 @@
                         </form>
                     </li>
                     <li class="collection-item" 
-                        v-for="(item, index) in todoItems" 
-                        @click='deleteTodoEl(index)' 
+                        v-for="(item, index) in todoItems"  
                         :key="item.id">
                         <label class="grey-text" 
                                :class="{ 
@@ -67,16 +66,14 @@
                                    v-model="item.isChecked" />
                             <span :style="{ textDecoration: item.isChecked ? 'line-through' : 'none' }"> 
                                 {{ item.text }} 
-                            </span>
-                            <i class="material-icons hoverable" 
-                               @click='todoItems.splice(todoItems.id, 1)' 
-                               :style="{ position: 'absolute', right: '20px' }"> close </i>
-                            <i class="material-icons" 
-                               @click="editNewTodo()"
-                               :style="{ position: 'absolute', right: '50px' }"> edit </i> 
-                               
-                           
+                            </span>     
                         </label>
+                        <i class="material-icons hoverable" 
+                            @click='deleteTodoEl(index)' 
+                            :style="{ position: 'absolute', right: '20px' }"> close </i>
+                        <i class="material-icons" 
+                            @click="editNewTodo(index)"
+                            :style="{ position: 'absolute', right: '50px' }"> edit </i> 
                     </li>
                 </ul>
             </div>

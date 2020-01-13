@@ -44,12 +44,14 @@ let vm = new Vue({
             
             this.newTodo = '';
         }, 
-    //    deleteTodoEl() {
-    //         this.todoItems.splice(todoItems.id, 1);
-    //     }
-        editNewTodo(index) {
+       deleteTodoEl(itemId) {
+            this.todoItems.splice(itemId, 1);
+        },
+        editNewTodo(itemId) {
             let newEdit = prompt('Введите новое задание');
-            this.todoItems.splice(index, 1, newEdit);
+            console.log(newEdit);
+            return this.todoItems.splice(itemId, 1, newEdit);
+            
         }
     },
 });
