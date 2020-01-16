@@ -29,20 +29,15 @@ let doneTodosComponent = {
 };
 
 let inputComponent = {
-    model: {
-        prop: 'checked',
-        event: 'change'
-      },
-    props: ['text'],
+    props: ['value'],
     template:  `
         <div class="col s11">
             <input 
                 class="validate"
                 type="text"
                 placeholder="Что сделать?"
-                :checked="checked"
-                @change="$emit('change', $event.target.checked)"
-                v-model.trim = "newTodo"
+                :value="value"
+                @input="$emit('input', $event.target.value)"
             />
         </div>
     `
