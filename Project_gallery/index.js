@@ -3,6 +3,8 @@ let targetEl;
 let elementMenu;
 let spiner = document.querySelector('.preloader-wrapper');
 
+ 
+
 function buildGallery(image) {
   let bodyEl = document.querySelector(".row");
   bodyEl.innerHTML = '';
