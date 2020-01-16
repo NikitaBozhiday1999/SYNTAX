@@ -33,10 +33,7 @@ let inputComponent = {
         prop: 'checked',
         event: 'change'
       },
-    props: {
-        checked: Boolean,
-        'newTodo': String
-    },
+    props: ['text'],
     template:  `
         <div class="col s11">
             <input 

@@ -31,14 +31,13 @@
                             <form class="row" @submit.prevent="addNewTodo">
                                 
                                 <input-com
-                                    :new-todo="newTodo"
+                                    :text="newTodo"
                                     @change="$event"
-                                    v-model="lovingVue"
+                                    v-model="newTodo"
                                 ></input-com>
                                 
                     
-                                <button-component 
-                                    @submit.native.prevent="addNewTodo"> 
+                                <button-component> 
                                     <template #add> Добавить </template>  
                                 </button-component>
 
