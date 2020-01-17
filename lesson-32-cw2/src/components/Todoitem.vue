@@ -39,7 +39,7 @@
 
 
 <style lang="scss" scoped>
-    .collection-item .material-icon {
+    .collection-item .material-icons {
         cursor: pointer;
     }
     .collection-item .material-icon:first-of-type {
