@@ -24,12 +24,12 @@
                                 <button-component> 
                                     <template #add> Добавить </template>  
                                 </button-component>
-
+                                
                             </form>
                             
                         </todo-header>
                     </li>
-                    <todo-item 
+                    <todo-item
                         v-for = "(item, index) in todoItems" 
                         :key  = "item.id"
                         :is-checked = "item.isChecked"
@@ -39,7 +39,10 @@
                     >
                         {{ item.text }}
                     </todo-item>
-                </ul>
+                <delete-button @del="deleteAllTodo">
+                    <template #delete> Удалить </template>
+                </delete-button>   
+                </ul> 
             </div>
         </div>
 </template>
@@ -51,6 +54,7 @@ import todoHeaderComponent from './components/Todoheader.vue'
 import doneTodosComponent from './components/Badge.vue'
 import addButtonComponent from './components/Button.vue'
 import inputComponent from './components/Input.vue'
+import deleteButtonComponent from './components/Buttondelete.vue'
 
 
 
@@ -62,6 +66,7 @@ export default {
         doneTodo: doneTodosComponent,
         buttonComponent: addButtonComponent,
         inputCom: inputComponent,
+        deleteButton: deleteButtonComponent,
     },
     data() { 
         return {
@@ -80,12 +85,30 @@ export default {
     computed: {
         doneTodos() {
             return this.todoItems.filter(item => item.isChecked);
+            
         }
     },
     created() {
         this.hidePreloader();
     },
+    mounted() {
+        if (localStorage.newTodo) {
+            this.newTodo = localStorage.newTodo;
+        }
+        if (localStorage.getItem('todoItems')) {
+            try {
+                this.todoItems = JSON.parse(localStorage.getItem('todoItems'));
+            } 
+            catch(e) {
+                localStorage.removeItem('todoItems');
+            }
+        }
+    },
     watch: {
+        newTodo(newName) {
+            localStorage.newTodo = newName;
+        },
+        
         doneTodos(newValue) {
             if (!this.todoItems.length) {
                 M.toast({ html: 'Список дел пуст!' });
@@ -96,16 +119,23 @@ export default {
         }
     },
     methods: {
+        saveTodo() {
+            const parsed = JSON.stringify(this.todoItems);
+            localStorage.setItem('todoItems', parsed);
+        },
         addNewTodo() {
             if (!this.newTodo.length) return;
-
+            
             this.todoItems.push({
                 id        : this.todoItems.length + 1,
                 text      : this.newTodo,
                 isChecked : false
             });
-
             this.newTodo = '';
+            this.saveTodo();
+        },
+        deleteAllTodo() {
+            this.todoItems.splice(0);
         },
 
         hidePreloader() {
@@ -114,6 +144,7 @@ export default {
 
         removeTodoItem(itemIdx) {
             this.todoItems.splice(itemIdx, 1);
+            this.saveTodo();
         },
         editNewTodo(itemIdx) {
             let newEdit = prompt('Введите новое задание');
