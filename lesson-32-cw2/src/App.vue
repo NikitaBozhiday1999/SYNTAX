@@ -149,6 +149,7 @@ export default {
         editNewTodo(itemIdx) {
             let newEdit = prompt('Введите новое задание');
             this.todoItems[itemIdx].text = newEdit;
+            this.saveTodo();
         }
     }
 }
