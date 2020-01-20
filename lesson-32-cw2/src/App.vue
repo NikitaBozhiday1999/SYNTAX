@@ -54,7 +54,7 @@ import todoHeaderComponent from './components/Todoheader.vue'
 import doneTodosComponent from './components/Badge.vue'
 import addButtonComponent from './components/Button.vue'
 import inputComponent from './components/Input.vue'
-import deleteButtonComponent from './components/Buttondelete.vue'
+
 
 
 
