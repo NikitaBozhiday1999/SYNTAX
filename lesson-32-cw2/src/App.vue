@@ -26,7 +26,6 @@
                                 </button-component>
                                 
                             </form>
-                            
                         </todo-header>
                     </li>
                     <todo-item
@@ -37,7 +36,7 @@
                         @edit-item = "editNewTodo(index)"
                         @checked-change = "item.isChecked = $event"
                     >
-                        {{ item.text }}
+                        {{ item.text | readMore(50, '...') }}
                     </todo-item>
                 <button-component @click.native="deleteAllTodo" :style="{ width: '100%' }">
                     <template> Удалить </template>
@@ -55,10 +54,13 @@ import doneTodosComponent from './components/Badge.vue'
 import addButtonComponent from './components/Button.vue'
 import inputComponent from './components/Input.vue'
 
+import helpers from '@/mixins/helpers';
+
 
 
 
 export default {
+    mixins: [helpers],
     components: {
         preloader: preloaderComponent,
         todoItem: todoItemComponent,
@@ -66,7 +68,6 @@ export default {
         doneTodo: doneTodosComponent,
         buttonComponent: addButtonComponent,
         inputCom: inputComponent,
-        deleteButton: deleteButtonComponent,
     },
     data() { 
         return {
