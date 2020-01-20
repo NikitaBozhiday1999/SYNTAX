@@ -22,7 +22,7 @@
                                 <input-com v-model="newTodo"></input-com>
                                 
                                 <button-component> 
-                                    <template #add> Добавить </template>  
+                                    <template> Добавить </template>  
                                 </button-component>
                                 
                             </form>
@@ -39,9 +39,9 @@
                     >
                         {{ item.text }}
                     </todo-item>
-                <delete-button @del="deleteAllTodo">
-                    <template #delete> Удалить </template>
-                </delete-button>   
+                <button-component @click.native="deleteAllTodo" :style="{ width: '100%' }">
+                    <template> Удалить </template>
+                </button-component>
                 </ul> 
             </div>
         </div>
@@ -96,13 +96,8 @@ export default {
             this.newTodo = localStorage.newTodo;
         }
         if (localStorage.getItem('todoItems')) {
-            try {
-                this.todoItems = JSON.parse(localStorage.getItem('todoItems'));
-            } 
-            catch(e) {
-                localStorage.removeItem('todoItems');
-            }
-        }
+            this.todoItems = JSON.parse(localStorage.getItem('todoItems'));
+        } 
     },
     watch: {
         newTodo(newName) {
@@ -135,7 +130,8 @@ export default {
             this.saveTodo();
         },
         deleteAllTodo() {
-            this.todoItems.splice(0);
+            this.todoItems = [];
+            this.saveTodo();
         },
 
         hidePreloader() {

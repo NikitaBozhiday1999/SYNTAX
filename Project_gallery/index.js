@@ -2,6 +2,8 @@ let listEl = document.querySelector('.pagination');
 let targetEl; 
 let elementMenu;
 let spiner = document.querySelector('.preloader-wrapper');
+const LEFT_CHEVRON_SYMBOLS = 12;
+const RIGHT_CHEVRON_SYMBOLS = 13;
 
  
 
@@ -61,16 +63,16 @@ function pagination(event) {
     }
     targetEl = listEl.children[listEl.children.length - 1];
     targetEl = listEl.children[0];
-    if ((localStorage.getItem('value') == 1 && event.target.textContent.length == 12) || (localStorage.getItem('value') == 5 && event.target.textContent.length == 13)) {
+    if ((localStorage.getItem('value') == 1 && event.target.textContent.length == LEFT_CHEVRON_SYMBOLS) || (localStorage.getItem('value') == 5 && event.target.textContent.length == 13)) {
         return ;
     }
-    else if (localStorage.getItem('value') > 1 && event.target.textContent.length == 12) {
+    else if (localStorage.getItem('value') > 1 && event.target.textContent.length == LEFT_CHEVRON_SYMBOLS) {
         localStorage.setItem('value', +localStorage.getItem('value') - 1);
     }
-    else if ((localStorage.getItem('value') > 0 && localStorage.getItem('value') < 5) && event.target.textContent.length == 13) {
+    else if ((localStorage.getItem('value') > 0 && localStorage.getItem('value') < 5) && event.target.textContent.length == RIGHT_CHEVRON_SYMBOLS) {
         localStorage.setItem('value', +localStorage.getItem('value') + 1);
     }
-    else if (event.target.textContent.length < 12) {
+    else if (event.target.textContent.length < LEFT_CHEVRON_SYMBOLS) {
         localStorage.setItem('value', event.target.textContent);
     }
     elementMenu = listEl.children[localStorage.getItem('value')];
