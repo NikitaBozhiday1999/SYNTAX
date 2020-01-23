@@ -1,3 +1,22 @@
 <template>
-    <h1> Студент {{ $route.params.id }} </h1>
+    <!-- <h1> Студент {{ $route.params.id }} </h1> -->
+    <b-card :title="student.name"></b-card>
 </template>
+
+<script>
+    export default {
+        data() {
+            return {
+                student: {}
+            };
+        },
+        watch: {
+            $route: {
+                immediate: true,
+                handler(to) {
+                this.student = this.$parent.students.find(item => item.id == to.params.id);
+                }
+            }
+        }
+    }
+</script>
