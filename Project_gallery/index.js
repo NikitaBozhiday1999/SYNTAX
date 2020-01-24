@@ -29,7 +29,7 @@ async function readImage() {
 
 function startSession() {
     let currentPage = +localStorage.getItem('value');
-
+    
     if (!currentPage) {
         currentPage = 1;
 
