@@ -31,59 +31,68 @@ async function readImage() {
 }
 
 function startSession() {
-    if(localStorage.length == 0) {
-        localStorage.setItem('value', 1);
+    let currentPage = +localStorage.getItem('value');
+
+    if (!currentPage) {
+        currentPage = 1;
+
+        localStorage.setItem('value', currentPage);
     }
-        targetEl = listEl.children[localStorage.getItem('value')];
-        targetEl.classList.add('active');
+
+    if (currentPage == 1) {
+        listEl.firstElementChild.classList.add('disabled');
+    }
+    else if (currentPage == 5) {
+        listEl.lastElementChild.classList.add('disabled');
+    }
+
+    targetEl = listEl.children[currentPage];
+    targetEl.classList.add('active');
+    
     readImage();
 }
 
 function pagination(event) {
-    if (localStorage.getItem('value') == 5) {
-        // elementMenu = listEl.children[localStorage.getItem('value')];
-        rightArrow.classList.add('disabled');
-    }
-    // else if (localStorage.getItem('value' < 5)) {
-    //     rightArrow.classList.remove('disabled');
-    // }
-
-
-
-
+    const leftChevron = event.target.closest('.arrowL');
+    const rightChevron = event.target.closest('.arrowR');
+    const currentPage = +localStorage.getItem('value');
     
-    // if(localStorage.getItem('value') > 5) {
-    //     targetEl.classList.add('disabled');
-    //     targetEl.classList.remove('disabled');
-    // }
-    // else if(localStorage.getItem('value') == 1) {
-    //     targetEl.classList.add('disabled');
-    //     targetEl.classList.remove('disabled');
-    // }
-    // else if (localStorage.getItem('value') > 1 && localStorage.getItem('value') < 5) {
-    //     targetEl.classList.remove('disabled');
-    // }
-    // targetEl = listEl.children[listEl.children.length - 1];
-    // targetEl = listEl.children[0];
-    if ((localStorage.getItem('value') == 1 && event.target.textContent.length == LEFT_CHEVRON_SYMBOLS) || (localStorage.getItem('value') == 5 && event.target.textContent.length == RIGHT_CHEVRON_SYMBOLS)) {
-        return;
+    let newPage = null;
+
+    if (leftChevron && currentPage > 1) {
+        newPage = currentPage - 1;
     }
-    else if (localStorage.getItem('value') > 1 && event.target.textContent.length == LEFT_CHEVRON_SYMBOLS) {
-        localStorage.setItem('value', +localStorage.getItem('value') - 1);
+    else if (rightChevron && currentPage < 5) {
+        newPage = currentPage + 1;
     }
-    else if ((localStorage.getItem('value') > 0 && localStorage.getItem('value') < 5) && event.target.textContent.length == RIGHT_CHEVRON_SYMBOLS) {
-        localStorage.setItem('value', +localStorage.getItem('value') + 1);
+    else if (!leftChevron && !rightChevron && event.target.tagName == 'A') {
+        newPage = +event.target.textContent;
     }
-    else if (event.target.textContent.length < LEFT_CHEVRON_SYMBOLS) {
-        localStorage.setItem('value', event.target.textContent);
+
+    if (!newPage || newPage == currentPage) return;
+
+    listEl.firstElementChild.classList.remove('disabled');
+    listEl.lastElementChild.classList.remove('disabled');
+
+    listEl.firstElementChild.classList.add('waves-effect');
+    listEl.lastElementChild.classList.add('waves-effect');
+
+    listEl.children[currentPage].classList.remove('active');
+    listEl.children[newPage].classList.add('active');
+
+
+    if (newPage == 1) {
+        listEl.firstElementChild.classList.add('disabled');
+        listEl.firstElementChild.classList.remove('waves-effect');
     }
-    elementMenu = listEl.children[localStorage.getItem('value')];
-    for (let i = 0; i < listEl.children.length; i++) {
-        let removeClass = listEl.children[i];
-        removeClass.classList.remove('active');
+    else if (newPage == 5) {
+        listEl.lastElementChild.classList.add('disabled');
+        listEl.lastElementChild.classList.remove('waves-effect');
     }
-    elementMenu.classList.add('active');   
-    readImage();  
+
+    localStorage.setItem('value', newPage);
+
+    readImage();
 }
 
 listEl.addEventListener('click', pagination);
