@@ -1,9 +1,6 @@
 let listEl = document.querySelector('.pagination');
 let targetEl; 
-let elementMenu;
 let spiner = document.querySelector('.preloader-wrapper');
-const LEFT_CHEVRON_SYMBOLS = 12;
-const RIGHT_CHEVRON_SYMBOLS = 13;
 let leftArrow = document.querySelector('.arrowL');
 let rightArrow = document.querySelector('.arrowR');
 
