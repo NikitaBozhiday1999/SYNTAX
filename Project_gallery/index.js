@@ -5,12 +5,12 @@ let leftArrow = document.querySelector('.arrowL');
 let rightArrow = document.querySelector('.arrowR');
 
 
-
 async function readImage() {
     let page = localStorage.getItem('value');
     let bodyEl = document.querySelector(".row");
     bodyEl.innerHTML = '';
-    try {
+    bodyEl.style.display = 'none';
+    try { 
         let img = await fetch(`https://picsum.photos/v2/list?page=${page}&limit=10`);
         let images = await img.json();
         for (let image of images) {
@@ -23,7 +23,8 @@ async function readImage() {
         alert("So sorry, it's error...")
     }
     finally {
-        spiner.remove();
+        spiner.style.display = 'none';
+        bodyEl.style.display = 'block';
     }
 }
 
