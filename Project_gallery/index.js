@@ -1,4 +1,5 @@
 let listEl = document.querySelector('.pagination');
+listEl.style
 let targetEl; 
 let spiner = document.querySelector('.preloader-wrapper');
 let leftArrow = document.querySelector('.arrowL');
@@ -9,8 +10,9 @@ async function readImage() {
     let page = localStorage.getItem('value');
     let bodyEl = document.querySelector(".row");
     bodyEl.innerHTML = '';
-    bodyEl.style.display = 'none';
+    spiner.style.display = 'inline-block'
     try { 
+        bodyEl.style.display = 'none';
         let img = await fetch(`https://picsum.photos/v2/list?page=${page}&limit=10`);
         let images = await img.json();
         for (let image of images) {
@@ -23,8 +25,7 @@ async function readImage() {
         alert("So sorry, it's error...")
     }
     finally {
-        spiner.style.display = 'none';
-        bodyEl.style.display = 'block';
+        setTimeout(() => { spiner.style.display = 'none'; bodyEl.style.display = 'block'; }, 2500);
     }
 }
 
