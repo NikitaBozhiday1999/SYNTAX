@@ -1,6 +1,6 @@
 <template>
     <div class="collection-header">
-        <h4 v-neon-text:white="'#e8ba00'"> <slot name= "title"></slot> </h4>
+        <h4 v-neon-text:white="'#0095B6'"> <slot name= "title"></slot> </h4>
         
         <slot name="badge"></slot>
         
